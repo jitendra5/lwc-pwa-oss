@@ -1,0 +1,362 @@
+<template>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#" onclick={handleLog}>
+            <img
+                src="/resources/icons/favicon-96x96.png"
+                width="30"
+                height="30"
+                class="d-inline-block align-top"
+                alt=""
+            />
+            <span class="titleCls text-uppercase">Cloudbyz</span>
+        </a>
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            onclick={showToggle}
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active" onclick={handleLog}>
+                    <a class="nav-link" href="#"
+                        >Home <span class="sr-only">(current)</span></a
+                    >
+                </li>
+                <li class="nav-item active" onclick={showAboutUsPage}>
+                    <a class="nav-link" href="#"
+                        >About Us <span class="sr-only"></span
+                    ></a>
+                </li>
+                <li class="nav-item active" onclick={showContactUsPage}>
+                    <a class="nav-link" href="#"
+                        >Contact Us <span class="sr-only"></span
+                    ></a>
+                </li>
+            </ul>
+            <button
+                class="btn btn-outline-primary my-2 my-sm-0 mr-1"
+                type="submit"
+                onclick={handleLog}
+            >
+                Login
+            </button>
+            <button
+                class="btn btn-outline-primary my-2 my-sm-0"
+                type="submit"
+                onclick={handleReg}
+            >
+                Sign Up
+            </button>
+        </div>
+    </nav>
+    <template if:true={isAboutUs}>
+        <div class="container cardContainer">
+            <div class="card" style="width: 18rem;">
+                <img
+                    class="card-img-top"
+                    src="/resources/icons/visitplan.png"
+                    alt="Card image cap"
+                    style="height: 180px;"
+                />
+                <div class="card-body">
+                    <h5 class="card-title">Visit Plan</h5>
+                    <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                    </p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img
+                    class="card-img-top"
+                    src="/resources/icons/budgetMgmt.png"
+                    alt="Card image cap"
+                    style="height: 180px;"
+                />
+                <div class="card-body">
+                    <h5 class="card-title">Budget</h5>
+                    <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                    </p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img
+                    class="card-img-top"
+                    src="/resources/icons/patRecruit.jpg"
+                    alt="Card image cap"
+                    style="height: 180px;"
+                />
+                <div class="card-body">
+                    <h5 class="card-title">Patient Recruitment</h5>
+                    <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                    </p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img
+                    class="card-img-top"
+                    src="/resources/icons/aws.jpeg"
+                    alt="Card image cap"
+                    style="height: 180px;"
+                />
+                <div class="card-body">
+                    <h5 class="card-title">AWS Data backup</h5>
+                    <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                    </p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img
+                    class="card-img-top"
+                    src="/resources/icons/cal.jpg"
+                    alt="Calender"
+                    style="height: 180px;"
+                />
+                <div class="card-body">
+                    <h5 class="card-title">Phase Calender</h5>
+                    <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                    </p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+    </template>
+    <template if:true={isContactUs}>
+        <div class="container" style="margin-top: 15%;">
+            <p style="text-align: justify;">
+                Cloudbyz is proud to serve visionary companies and innovative
+                partners around the world. If you're considering innovative
+                Cloudbyz products, solutions and services, or just want more
+                information, we're happy to answer all your questions and get
+                you set up. Simply fill out the form, or for immediate
+                assistance, call us at 1‑312‑763‑8040.
+            </p>
+            <p style="text-align: justify;">
+                Cloudbyz ITBM solution helps organizations gain visibility,
+                insight and control across all work. The solution provides the
+                tools to properly align resources, projects and goals;
+                optimizing business strategy and performance. Cloudbyz ITBM
+                enhances decision-making, maximizes resource utilization and
+                increases operational efficiency.
+            </p>
+
+            <p style="text-align: justify;">
+                Organizations that don’t have tightly integrated PPM,
+                Financials, Resources, ALM and APM typically collect data
+                through meetings, e-mails and other manual methods, then copy or
+                paste it into the PPM system. This approach is slow, error-prone
+                and unnecessary. With the Cloudbyz solution, real-time
+                visibility gives stakeholders reliable information about the
+                status of projects in motion and allows executives to
+                confidently allocate resources to future development projects.
+            </p>
+
+            <p style="text-align: justify;">
+                Cloudbyz ITBM provides real-time visibility into the current
+                state of organizational initiatives, resources and spending
+                through the centralized collection of data from multiple sources
+                and perspectives. Integration across multiple business and IT
+                process domains through PPM functions provides multi-dimensional
+                views of this data for better visibility and understanding of
+                resource supply versus project (and other work) demand in IT and
+                other project environments. Cloudbyz ITBM also enables executive
+                action and decision making.
+            </p>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    <p class="card-title">CHICAGO</p>
+                    4320 Winfield Road, Suite 200 Warrenville, IL 60555 USA +1
+                    (312)-763-8040 info@cloudbyz.com
+                </div>
+                <div class="col-sm">
+                    <p class="card-title">LOS ANGELES</p>
+                    5630 W Cerritos Ave Cypress, CA 90630 +1 (312)-763-8040
+                    info@cloudbyz.com
+                </div>
+                <div class="col-sm">
+                    <p class="card-title">BENGALURU</p>
+                    #1664, Sriven Teesta, Third Floor 27th Main, Sector 2, HSR
+                    Layout Bengaluru, Karnataka 560102, India +91-9663127655
+                    info@cloudbyz.com
+                </div>
+            </div>
+        </div>
+    </template>
+    <template if:true={isLogin}>
+        <div class="container">
+            <div class="formDiv">
+                <form>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput">Email</label>
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="em"
+                            placeholder="Email"
+                        />
+                    </div>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput2">Password</label>
+                        <input
+                            type="password"
+                            class="form-control"
+                            id="pwd"
+                            placeholder="Password"
+                        />
+                    </div>
+                </form>
+                <button type="submit" class="btn btn-primary signIn">
+                    Sign in
+                </button>
+            </div>
+        </div>
+    </template>
+
+    <template if:true={isRegistration}>
+        <div class="container">
+            <div class="formDiv">
+                <form>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput">First Name</label>
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="fName"
+                            placeholder="First Name"
+                        />
+                    </div>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput2">Last Name</label>
+                        <input
+                            type="password"
+                            class="form-control"
+                            id="lName"
+                            placeholder="Last Name"
+                        />
+                    </div>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput2">Email</label>
+                        <input
+                            type="password"
+                            class="form-control"
+                            id="email"
+                            placeholder="Email"
+                        />
+                    </div>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput2">Phone</label>
+                        <input
+                            type="password"
+                            class="form-control"
+                            id="phone"
+                            placeholder="Phone"
+                        />
+                    </div>
+                </form>
+                <button type="submit" class="btn btn-primary signUp">
+                    Sign Up
+                </button>
+            </div>
+        </div>
+    </template>
+
+    <!-- Footer -->
+    <footer class="page-footer font-small blue pt-4">
+        <!-- Footer Links -->
+        <div class="container-fluid text-center text-md-left footer1">
+            <!-- Grid row -->
+            <div class="row">
+                <!-- Grid column -->
+                <div class="col-md-6 mt-md-0 mt-3">
+                    <!-- Content -->
+                    <h5 class="text-uppercase">Cloudbyz</h5>
+                    <p>
+                        Cloudbyz is focused on building innovative enterprise
+                        applications and solutions natively on cloud to help
+                        enterprises to be innovative and agile.
+                    </p>
+                </div>
+                <!-- Grid column -->
+
+                <hr class="clearfix w-100 d-md-none pb-3" />
+
+                <!-- Grid column -->
+                <div class="col-md-3 mb-md-0 mb-3">
+                    <!-- Links -->
+                    <h5 class="text-uppercase">Technologies</h5>
+
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#!">Salesforce</a>
+                        </li>
+                        <li>
+                            <a href="#!">Mulesoft</a>
+                        </li>
+                        <li>
+                            <a href="#!">AWS</a>
+                        </li>
+                        <li>
+                            <a href="#!">Machine Learning</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-3 mb-md-0 mb-3">
+                    <!-- Links -->
+                    <h5 class="text-uppercase">Solutions</h5>
+
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#!">CTMS</a>
+                        </li>
+                        <li>
+                            <a href="#!">ITPM</a>
+                        </li>
+                        <li>
+                            <a href="#!">Budget Management</a>
+                        </li>
+                        <li>
+                            <a href="#!">Integrations</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Grid column -->
+            </div>
+            <!-- Grid row -->
+        </div>
+        <!-- Footer Links -->
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3 footer1">
+            © 2020 Copyright:
+            <a href="https://www.cloudbyz.com"> cloudbyz.com</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+</template>

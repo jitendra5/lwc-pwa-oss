@@ -1,0 +1,63 @@
+{
+    "name": "Cloudbyz",
+    "theme_color": "#2196f3",
+    "background_color": "#2196f3",
+    "display": "standalone",
+    "orientation": "portrait",
+    "short_name": "Cbyz",
+    "Scope": "/",
+    "start_url": "/",
+    "icons": [
+        {
+            "src": "resources/icons/cbyz-16.png",
+            "sizes": "16x16",
+            "type": "image/png"
+        },
+        {
+            "src": "resources/icons/cbyz-32.png",
+            "sizes": "32x32",
+            "type": "image/png"
+        },
+        {
+            "src": "resources/icons/cbyz-72.png",
+            "sizes": "72x72",
+            "type": "image/png"
+        },
+        {
+            "src": "resources/icons/cbyz-96.jpg",
+            "sizes": "96x96",
+            "type": "image/jpg"
+        },
+        {
+            "src": "resources/icons/cbyz-128.png",
+            "sizes": "128x128",
+            "type": "image/png"
+        },
+        {
+            "src": "resources/icons/cbyz-144.png",
+            "sizes": "144x144",
+            "type": "image/png"
+        },
+        {
+            "src": "resources/icons/cbyz-152.png",
+            "sizes": "152x152",
+            "type": "image/png"
+        },
+        {
+            "src": "resources/icons/cbyz-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "resources/icons/cbyz-384.png",
+            "sizes": "384x384",
+            "type": "image/png"
+        },
+        {
+            "src": "resources/icons/cbyz-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "splash_pages": null
+}
